@@ -1,3 +1,4 @@
+
 #
 # Gramps - a GTK+/GNOME based genealogy program
 #
@@ -2181,18 +2182,18 @@ class RelationshipCalculator:
                 return trans_text("gender unknown|ex-spouse")
         elif spouse_type == self.PARTNER_UNMARRIED:
             if gender == MALE:
-                return trans_text("unmarried|husband")
+                return trans_text("male,unmarried|partner")
             elif gender == FEMALE:
-                return trans_text("unmarried|wife")
+                return trans_text("female,unmarried|partner")
             else:
-                return trans_text("gender unknown,unmarried|spouse")
+                return trans_text("gender unknown,unmarried|partner")
         elif spouse_type == self.PARTNER_EX_UNMARRIED:
             if gender == MALE:
-                return trans_text("unmarried|ex-husband")
+                return trans_text("male,unmarried|ex-partner")
             elif gender == FEMALE:
-                return trans_text("unmarried|ex-wife")
+                return trans_text("female,unmarried|ex-partner")
             else:
-                return trans_text("gender unknown,unmarried|ex-spouse")
+                return trans_text("gender unknown,unmarried|ex-partner")
         elif spouse_type == self.PARTNER_CIVIL_UNION:
             if gender == MALE:
                 return trans_text("male,civil union|partner")
